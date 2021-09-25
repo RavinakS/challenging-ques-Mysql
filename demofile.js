@@ -1,5 +1,15 @@
-var a = 5;
-var b = 9;
-var c = a + b;
-console.log(c);
-console.log("after cloning");
+const mysql = require('mysql');
+
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'roor',
+    password: 'ravina@123',
+    database: 'pets'
+});
+
+db.connect(err => {
+    if(err){
+        console.log(err);
+    }
+    console.log("* * Connected!! * *");
+})
