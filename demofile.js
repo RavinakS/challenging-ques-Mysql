@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -14,4 +14,8 @@ db.connect(err => {
     }else{
         console.log("* * Connected!! * *");
     }
+})
+
+db.query('show tables', function(err, table){
+    console.log(table);
 })
