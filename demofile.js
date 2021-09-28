@@ -8,13 +8,13 @@ const db = mysql.createConnection({
     port: 3306
 });
 
-db.connect(err => {
-    if(err){
-        console.log(err);
-    }else{
-        console.log("* * Connected!! * *");
-    }
-})
+// db.connect(err => {
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("* * Connected!! * *");
+//     }
+// })
 
 db.query('show tables', function(err, table){
     console.log(table);
