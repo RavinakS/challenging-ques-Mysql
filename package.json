@@ -9,6 +9,7 @@
   "author": "Ravina",
   "license": "ISC",
   "dependencies": {
+    "knex": "^0.95.11",
     "mysql2": "^2.3.0"
   }
 }
